@@ -115,7 +115,7 @@ class PhoenixChannel {
 
   /// @nodoc
   bool isMember(
-      String topicParam, String event, Map payload, String joinRefParam) {
+      String topicParam, String event, dynamic payload, String joinRefParam) {
     if (_topic != topicParam) {
       return false;
     }
@@ -169,7 +169,7 @@ class PhoenixChannel {
   }
 
   /// Pushes a message to the server
-  PhoenixPush push({String event, Map payload}) {
+  PhoenixPush push({String event, dynamic payload}) {
     if (!_joinedOnce) {
       throw ("Tried to push event before joining channel");
     }

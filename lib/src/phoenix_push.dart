@@ -8,7 +8,7 @@ class PhoenixPush {
   Map receivedResp;
   int timeout;
   List recHooks = [];
-  Map payload = {};
+  dynamic payload = {};
   PhoenixChannel channel;
   String event;
   String ref;

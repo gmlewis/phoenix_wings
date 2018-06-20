@@ -2,7 +2,7 @@ import 'dart:convert';
 
 class PhoenixMessage {
   String joinRef, ref, topic, event;
-  Map payload;
+  dynamic payload;
 
   PhoenixMessage(this.joinRef, this.ref, this.topic, this.event, this.payload);
 
