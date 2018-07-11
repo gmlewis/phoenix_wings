@@ -94,7 +94,7 @@ class PhoenixSocket {
       } catch (reason) {
         _conn = null;
         print(
-            "WebSocket connection to ${_endpoint.toString()} failed!: $reason");
+            "WebSocket connection to ${_endpoint.host}:${_endpoint.port} failed!\n$reason");
 
         tries += 1;
         var wait = reconnectAfterMs[min(tries, reconnectAfterMs.length - 1)];
